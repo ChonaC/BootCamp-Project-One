@@ -19,11 +19,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-6 col-sm-4">
+            <div class="col-12 col-sm-4 m-3">
                 <h2>NFL Game Results</h2>
                 <p>Click on the button to choose a game week.</p>
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Choose a Week</button>
+                    <button onclick="myFunction()" class="dropbtn ">Choose a Week</button>
                         <div id="myDropdown" class="dropdown-content">
                             <a href="#">Week 1</a>
                             <a href="#">Week 2</a>
@@ -31,13 +31,13 @@
                         </div>
                 </div> 
             </div>
-            <div class="col-6 col-sm-4">
+            <div class="col-12 col-sm-4 m-3">
                 <h2>NFL Teams</h2>
                 <p>Some text..</p>
             </div>
-            <div class="col-md-6 offset-md-3">
+            <div class="col-12 mt-3">
                 <h2>Weather</h2>
-                <h5 class="mt-1" style="background-color: rgb(145, 7, 7);">Search for a City:</h5>
+                <h5 class="mt-1 weather-heading">Search for a City:</h5>
                 <div class="input-group mb-3">
                     <input id="enter-city" type="text" class="form-control" placeholder="Enter a city" aria-label="Enter a city">
                     <div class="input-group-append">
@@ -49,7 +49,7 @@
                 <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
                 <form id="history"></form>
                 <div class="col-lg-9">
-                    <div class="row mr-0">
+                    <div class="row">
                         <div class="col-lg-11 card m-3 d-none"  id="today-weather">
                             <div class="card-body">
                                 <h3 id="city-name" class="city-name align-middle"></h3>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="row d-none" id="fiveday-header">
-                    <div class="col-12" style="background-color: rgb(145, 7, 7); color: black;">
+                    <div class="col-12" style="background-color: rgb(145, 7, 7); color: black; width: fit-content;">
                         <h3>5-Day Forecast</h3>
                     </div>
                 </div>
