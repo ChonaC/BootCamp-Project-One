@@ -34,11 +34,12 @@ body {
 
 
 h2 {
-    color: white;
+    color: var(--text);
     font-family: 'Anton', sans-serif;
+    font-size: 50px;
 }
 p {
-    color: white;
+    color:var(--text);
 }
 
 
@@ -71,6 +72,7 @@ header {
     display: none;
     position: absolute;
     background-color: var(--tab-color);
+    height: 400px;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -90,8 +92,8 @@ header {
 
 /* This is for the calendar */
 .calendar{
-  background-color: aliceblue;
-  margin: 10px;
+  background-color: rgb(145, 7, 7);
+  margin-top: 5px;
 }
 .bg-black {
   background-color: #333

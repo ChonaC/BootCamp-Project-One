@@ -1,3 +1,6 @@
+
+
+
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -161,5 +164,20 @@ function initPage() {
   }
   
 }
-
+// Below this line is for calendar
+function initCalendar(){
+    const mondayEl = document.getElementById("monday");
+    const tuesdayEl = document.getElementById("tuesday");
+    const wednesdayEl = document.getElementById("wednesday");
+    const thursdayEl = document.getElementById("thursday");
+    const fridayEl = document.getElementById("friday");
+    const saturdayEl = document.getElementById("saturday");
+    const sundayEl = document.getElementById("sunday");
+}
 initPage();
+
+
+
+  // This is for the current date and time
+var todayDate = moment().format('dddd, MMM Do YYYY, h:mm a');
+  $("#currentDay").html(todayDate);
