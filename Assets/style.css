@@ -36,11 +36,12 @@ body {
 h2 {
   color: white;
   font-family: 'Anton', sans-serif;
+  font-size: 50px;
   text-shadow: 2px 2px black;
 }
 
 p {
-    color: white;
+    color: var(--text);
 }
 
 
@@ -112,7 +113,9 @@ button.dropbtn {
   h2 {
     background-color: rgb(145, 7, 7);
     width: fit-content;
+    font-size: 30px;
   }
+  
   .weather-heading {
     background-color: white;
   }
