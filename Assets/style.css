@@ -34,12 +34,14 @@ body {
 
 
 h2 {
-    color: var(--text);
-    font-family: 'Anton', sans-serif;
-    font-size: 50px;
+  color: white;
+  font-family: 'Anton', sans-serif;
+  font-size: 50px;
+  text-shadow: 2px 2px black;
 }
+
 p {
-    color:var(--text);
+   color: var(--text);
 }
 
 
@@ -58,42 +60,70 @@ header {
     border: none;
     cursor: pointer;
   }
+
+button.dropbtn {
+  border-radius: 10px;
+  box-shadow: 4px 7px 7px 0px black;
+}
   
-  .dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+}
+  
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--tab-color);
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+  
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+  
+.dropdown a:hover {background-color: #ddd;}
+  
+.show {display: block;}
+
+.weather-heading {
+  background-color: var(--tab-color);
+  width: fit-content;
+}
+
+.input-group.mb-3 {
+  width: 50%;
+}
+
+#history {
+  width: 50%;
+}
+
+@media screen and (max-width: 766px) {
+  h2 {
+    background-color: rgb(145, 7, 7);
+    width: fit-content;
+    font-size: 30px;
+  }
+  
+  .weather-heading {
     background-color: white;
   }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--tab-color);
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown a:hover {background-color: #ddd;}
-  
-  .show {display: block;}
+}
 
 
-
-
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
   }
+}
