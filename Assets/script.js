@@ -1,3 +1,6 @@
+
+
+
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -163,3 +166,9 @@ function initPage() {
 }
 
 initPage();
+
+
+
+  // This is for the current date and time
+var todayDate = moment().format('dddd, MMM Do YYYY, h:mm a');
+  $("#currentDay").html(todayDate);

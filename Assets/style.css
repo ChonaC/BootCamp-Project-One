@@ -34,11 +34,12 @@ body {
 
 
 h2 {
-    color: white;
+    color: var(--text);
     font-family: 'Anton', sans-serif;
+    font-size: 50px;
 }
 p {
-    color: white;
+    color:var(--text);
 }
 
 
