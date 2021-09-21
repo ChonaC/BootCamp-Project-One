@@ -31,19 +31,16 @@ body {
     clear: both;
 }
 
-
-
 h2 {
   color: white;
   font-family: 'Anton', sans-serif;
   font-size: 50px;
-  text-shadow: 2px 2px black;
+  text-shadow: 4px 3px black;
 }
 
 p {
    color: var(--text);
 }
-
 
 header {
     color:var(--text);
@@ -53,13 +50,13 @@ header {
 
 /* This is for the drop down button */
 .dropbtn {
-    background-color: var(--tab-color);
-    color:black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
+  background-color: var(--tab-color);
+  color:black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
 button.dropbtn {
   border-radius: 10px;
@@ -102,11 +99,11 @@ button.dropbtn {
 }
 
 .input-group.mb-3 {
-  width: 50%;
+  width: 70%;
 }
 
 #history {
-  width: 50%;
+  width: 70%;
 }
 
 @media screen and (max-width: 766px) {
@@ -115,9 +112,21 @@ button.dropbtn {
     width: fit-content;
     font-size: 30px;
   }
+
+  .dropbtn {
+    padding: 10px;
+  }
   
   .weather-heading {
     background-color: white;
+  }
+
+  .input-group.mb-3 {
+    width: 80%;
+  }
+
+  #history {
+    width: 80%;
   }
 }
 
