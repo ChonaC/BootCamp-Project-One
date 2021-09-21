@@ -17,7 +17,7 @@ body {
 
 /* This is for making the columns */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 .column {
@@ -175,6 +175,7 @@ button.dropbtn {
   padding: .75rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
+  }
   .input-group.mb-3 {
     width: 80%;
   }
