@@ -19,6 +19,7 @@ link: https://chonac.github.io/BootCamp-Project-One/
 ## Credits
 
 Used information from:
+<br>
 https://openweathermap.org/api
 <br>
 https://getbootstrap.com/docs/5.1/getting-started/introduction/
@@ -28,6 +29,9 @@ http://www.espn.com/apis/devcenter/docs
 ## How to Contribute
 
 Add input fields so when you click on a game you can enter the score and key information about the players, teams or how the game went. 
+<br>
 Add players and their stats to the application. 
+<br>
 Add live updates with the score of the game and what quarter and time during the quarter the teams are in. 
+<br>
 Be able to customize the site based on your favorite team. 
