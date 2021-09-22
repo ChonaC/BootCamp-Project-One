@@ -72,6 +72,16 @@ button.dropbtn {
   display: inline-block;
 }
   
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--tab-color);
+    height: 400px;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
 .dropdown-content {
   display: none;
   position: absolute;
@@ -120,14 +130,63 @@ button.dropbtn {
   .weather-heading {
     background-color: white;
   }
+}
+/* This is for the calendar */
+span{
+  float: left;
+  clear: left;
+}
+.calendar{
+  width: 1400px;
+  margin-top: 0 auto;
+}
+.bg-black {
+  background-color: #333
+}
+.padding-15px-lr {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.padding-5px-tb {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.margin-10px-bottom {
+  margin-bottom: 10px;
+}
+.border-radius-5 {
+  border-radius: 5px;
+}
 
-  .input-group.mb-3 {
-    width: 80%;
-  }
+.margin-10px-top {
+  margin-top: 10px;
+}
+.font-size14 {
+  font-size: 14px;
+}
 
-  #history {
-    width: 80%;
-  }
+.text-light-gray {
+  color: #d6d5d5;
+}
+.font-size13 {
+  font-size: 13px;
+}
+
+.table-bordered td, .table-bordered th {
+  border: 1px solid #000000;
+}
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #0c0c0c;
+} 
+
+.input-group.mb-3 {
+  width: 80%;
+}
+
+#history {
+  width: 80%;
 }
 
 
