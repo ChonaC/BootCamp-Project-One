@@ -12,6 +12,7 @@ Website can be accessed through ChonaC github profile via URL.
 ## Usage
 
 Website is dynamic and can be viewed on any screen size and meets all standards for accessibility.
+<br>
 link: https://chonac.github.io/BootCamp-Project-One/
 
 ![website screenshot](./Images/nfl-dashboard-screenshot.png)
@@ -34,4 +35,4 @@ Add players and their stats to the application.
 <br>
 Add live updates with the score of the game and what quarter and time during the quarter the teams are in. 
 <br>
-Be able to customize the site based on your favorite team. 
+Be able to customize the site based on your favorite teams colors. 
