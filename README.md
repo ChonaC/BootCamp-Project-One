@@ -14,7 +14,7 @@ Website can be accessed through ChonaC github profile via URL.
 Website is dynamic and can be viewed on any screen size and meets all standards for accessibility.
 link: https://chonac.github.io/BootCamp-Project-One/
 
-![website screenshot](./assets/images/nfl-dashboard-screenshot.png)
+![website screenshot](./Images/nfl-dashboard-screenshot.png)
 
 ## Credits
 
