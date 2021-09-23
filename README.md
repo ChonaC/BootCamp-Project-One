@@ -15,7 +15,7 @@ Website is dynamic and can be viewed on any screen size and meets all standards 
 <br>
 link: https://chonac.github.io/BootCamp-Project-One/
 
-![website screenshot](./Images/nfl-dashboard-screenshot.png)
+![website screenshot](./Images/nfl-dashboard-screenshot-2.png)
 
 ## Credits
 
