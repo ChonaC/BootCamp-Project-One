@@ -170,14 +170,25 @@ function initCalendar(){
     var row2El = document.getElementById("secondRow");
     var row3El = document.getElementById("thridRow");
     var row4El = document.getElementById("fourthRow")
-    var mondayEl = document.getElementById("monday");
-    var tuesdayEl = document.getElementById("tuesday");
-    var wednesdayEl = document.getElementById("wednesday");
-    var thursdayEl = document.getElementById("thursday");
-    var fridayEl = document.getElementById("friday");
-    var saturdayEl = document.getElementById("saturday");
-    var sundayEl = document.getElementById("sunday");
-    var weekEl = document.getElementById("myDropdown");
+    var week1El = document.getElementById("week1");
+    var week2El = document.getElementById("week2");
+    var week3El = document.getElementById("week3");
+    var week4El = document.getElementById("week4");
+    var week5El = document.getElementById("week5");
+    var week6El = document.getElementById("week6");
+    var week7El = document.getElementById("week7");
+    var week8El = document.getElementById("week8");
+    var week9El = document.getElementById("week9");
+    var week10El = document.getElementById("week10");
+    var week11El = document.getElementById("week11");
+    var week12El = document.getElementById("week12");
+    var week13El = document.getElementById("week13");
+    var week14El = document.getElementById("week14");
+    var week15El = document.getElementById("week15");
+    var week16El = document.getElementById("week16");
+    var week17El = document.getElementById("week17");
+    var week18El = document.getElementById("week18");
+
     var weeksPlayed = [
         {
             week: "Week 1",
@@ -271,7 +282,15 @@ function initCalendar(){
         }
     ]
 
+    function getClear(){
+        // row1El.style.display='block';
+        // row2El.style.display='block';
+        // row3El.style.display='block';
+        // row4El.style.display='block';
+    }
+
     function getGames(startDate, endDate) {
+
         let apiURL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?limit=1000&dates=" +startDate +"-" +endDate;
         axios.get(apiURL)
             .then(function (response) {
@@ -355,8 +374,79 @@ function initCalendar(){
                 }
             }
     }
+    
+    week1El.addEventListener("click", function (){
+        getGames(weeksPlayed[0].start,weeksPlayed[0].end);
+    }) 
 
-    getGames(weeksPlayed[0].start,weeksPlayed[0].end)
+    week2El.addEventListener("click", function (){
+        getGames(weeksPlayed[1].start,weeksPlayed[1].end)
+    })
+
+    week3El.addEventListener("click", function (){
+        getGames(weeksPlayed[2].start,weeksPlayed[2].end)
+    })
+
+    week4El.addEventListener("click", function (){
+        getGames(weeksPlayed[3].start,weeksPlayed[3].end)
+    })
+    
+    week5El.addEventListener("click", function (){
+        getGames(weeksPlayed[4].start,weeksPlayed[4].end)
+    })
+    
+    week6El.addEventListener("click", function (){
+        getGames(weeksPlayed[5].start,weeksPlayed[5].end)
+    })
+
+    week7El.addEventListener("click", function (){
+        getGames(weeksPlayed[6].start,weeksPlayed[6].end)
+    })
+
+    week8El.addEventListener("click", function (){
+        getGames(weeksPlayed[7].start,weeksPlayed[7].end)
+    })
+
+    week9El.addEventListener("click", function (){
+        getGames(weeksPlayed[8].start,weeksPlayed[8].end)
+    })
+
+    week10El.addEventListener("click", function (){
+        getGames(weeksPlayed[9].start,weeksPlayed[9].end)
+    })
+
+    week11El.addEventListener("click", function (){
+        getGames(weeksPlayed[10].start,weeksPlayed[10].end)
+    })
+
+    week12El.addEventListener("click", function (){
+        getGames(weeksPlayed[11].start,weeksPlayed[11].end)
+    })
+
+    week13El.addEventListener("click", function (){
+        getGames(weeksPlayed[12].start,weeksPlayed[12].end)
+    })
+
+    week14El.addEventListener("click", function (){
+        getGames(weeksPlayed[13].start,weeksPlayed[13].end)
+    })
+
+    week15El.addEventListener("click", function (){
+        getGames(weeksPlayed[14].start,weeksPlayed[14].end)
+    })
+
+    week16El.addEventListener("click", function (){
+        getGames(weeksPlayed[15].start,weeksPlayed[15].end)
+    })
+
+    week17El.addEventListener("click", function (){
+        getGames(weeksPlayed[16].start,weeksPlayed[16].end)
+    })
+
+    week18El.addEventListener("click", function (){
+        getGames(weeksPlayed[17].start,weeksPlayed[17].end)
+    })
+    
 }
 initPage();
 initCalendar();
