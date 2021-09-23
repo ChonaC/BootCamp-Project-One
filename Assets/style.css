@@ -31,17 +31,16 @@ body {
     clear: both;
 }
 
-
-
 h2 {
-    color: var(--text);
-    font-family: 'Anton', sans-serif;
-    font-size: 50px;
-}
-p {
-    color:var(--text);
+  color: white;
+  font-family: 'Anton', sans-serif;
+  font-size: 50px;
+  text-shadow: 4px 3px black;
 }
 
+p {
+   color: var(--text);
+}
 
 header {
     color:var(--text);
@@ -51,49 +50,148 @@ header {
 
 /* This is for the drop down button */
 .dropbtn {
-    background-color: var(--tab-color);
-    color:black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
+  background-color: var(--tab-color);
+  color:black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button.dropbtn {
+  border-radius: 10px;
+  box-shadow: 4px 7px 7px 0px black;
+}
   
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: white;
-  }
+.dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+}
   
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
   
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--tab-color);
+    height: 400px;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--tab-color);
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
   
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+  
+.dropdown a:hover {background-color: #ddd;}
+  
+.show {display: block;}
+
+.weather-heading {
+  background-color: var(--tab-color);
+  width: fit-content;
+}
+
+.input-group.mb-3 {
+  width: 70%;
+}
+
+#history {
+  width: 70%;
+}
+
+@media screen and (max-width: 766px) {
+  h2 {
+    background-color: rgb(145, 7, 7);
+    width: fit-content;
+    font-size: 30px;
+  }
+
+  .dropbtn {
+    padding: 10px;
   }
   
-  .dropdown a:hover {background-color: #ddd;}
-  
-  .show {display: block;}
-
-
-
-
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
+  .weather-heading {
+    background-color: white;
   }
+}
+/* This is for the calendar */
+span{
+  float: left;
+  clear: left;
+}
+.calendar{
+  width: 1400px;
+  margin-top: 0 auto;
+}
+.bg-black {
+  background-color: #333
+}
+.padding-15px-lr {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.padding-5px-tb {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.margin-10px-bottom {
+  margin-bottom: 10px;
+}
+.border-radius-5 {
+  border-radius: 5px;
+}
+
+.margin-10px-top {
+  margin-top: 10px;
+}
+.font-size14 {
+  font-size: 14px;
+}
+
+.text-light-gray {
+  color: #d6d5d5;
+}
+.font-size13 {
+  font-size: 13px;
+}
+
+.table-bordered td, .table-bordered th {
+  border: 1px solid #000000;
+}
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #0c0c0c;
+} 
+
+.input-group.mb-3 {
+  width: 80%;
+}
+
+#history {
+  width: 80%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}

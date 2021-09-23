@@ -7,19 +7,19 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
   
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
         }
-      }
     }
-  }
+}
 
 
 // Below this line is for weather 
@@ -164,9 +164,202 @@ function initPage() {
   }
   
 }
+// Below this line is for calendar
+function initCalendar(){
+    var row1El = document.getElementById("firstRow");
+    var row2El = document.getElementById("secondRow");
+    var row3El = document.getElementById("thridRow");
+    var row4El = document.getElementById("fourthRow")
+    var mondayEl = document.getElementById("monday");
+    var tuesdayEl = document.getElementById("tuesday");
+    var wednesdayEl = document.getElementById("wednesday");
+    var thursdayEl = document.getElementById("thursday");
+    var fridayEl = document.getElementById("friday");
+    var saturdayEl = document.getElementById("saturday");
+    var sundayEl = document.getElementById("sunday");
+    var weekEl = document.getElementById("myDropdown");
+    var weeksPlayed = [
+        {
+            week: "Week 1",
+            start: 20210909,
+            end: 20210915,
+        },
+        {
+            week: "Week 2",
+            start: 20210916,
+            end: 20210922
+        },
+        {
+            week: "Week 3",
+            start: 20210923,
+            end: 20210929
+        },
+        {
+            week: "Week 4",
+            start: 20210930,
+            end: 20211006
+        },
+        {
+            week: "Week 5",
+            start: 20211007,
+            end: 20211013
+        },
+        {
+            week: "Week 6",
+            start: 20211014,
+            end: 20211020
+        },
+        {
+            week: "Week 7",
+            start: 20211021,
+            end: 20211027
+        },
+        {
+            week: "Week 8",
+            start: 20211028,
+            end: 20211103
+        },
+        {
+            week: "Week 9",
+            start: 20211104,
+            end: 20211110
+        },
+        {
+            week: "Week 10",
+            start: 20211111,
+            end: 20211117
+        },
+        {
+            week: "Week 11",
+            start: 20211123,
+            end: 20211124
+        },
+        {
+            week: "Week 12",
+            start: 20211125,
+            end: 20211201
+        },
+        {
+            week: "Week 13",
+            start: 20211202,
+            end: 20211208
+        },
+        {
+            week: "Week 14",
+            start: 20211209,
+            end: 20211215
+        },
+        {
+            week: "Week 15",
+            start: 20211216,
+            end: 20211222
+        },        
+        {
+            week: "Week 16",
+            start: 20211223,
+            end: 20211229
+        },
+        {
+            week: "Week 17",
+            start: 20211230,
+            end: 20220105
+        },
+        {
+            week: "Week 18",
+            start: 20220106,
+            end: 20220112
+        }
+    ]
 
+    function getGames(startDate, endDate) {
+        let apiURL = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?limit=1000&dates=" +startDate +"-" +endDate;
+        axios.get(apiURL)
+            .then(function (response) {
+                console.log(response);
+                var hold;
+                var index = 0;
+                for(var i = index; i < response.data.events.length; i++){
+                    if(hold != response.data.events[i].date.substring(0,10)){
+                        var theDateOfGame = response.data.events[i].date.substring(0,10);
+                        hold = theDateOfGame;
+                        index++;
+                        const datePlaying = document.createElement("span");
+                        datePlaying.setAttribute("class", "bg-black padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13");
+                        datePlaying.innerHTML = theDateOfGame;
+                        row1El.childNodes[1].append(datePlaying);
+                        break;
+                    }
+                }
+
+                getTeams(row1El, 11, hold, response);
+
+                for(var i = index; i < response.data.events.length; i++){
+       
+                    if(hold != response.data.events[i].date.substring(0,10)){
+                        var theDateOfGame = response.data.events[i].date.substring(0,10);
+                        hold = theDateOfGame;
+                        index = i;
+                        const datePlaying = document.createElement("span");
+                        datePlaying.setAttribute("class", "bg-black padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13");
+                        datePlaying.innerHTML = theDateOfGame;
+                        row2El.childNodes[1].append(datePlaying);
+                        break;
+                    }
+                }
+                
+                getTeams(row2El, 15, hold, response);
+
+                for(var i = index; i < response.data.events.length; i++){
+
+                    if(hold != response.data.events[i].date.substring(0,10)){
+                        var theDateOfGame = response.data.events[i].date.substring(0,10);
+                        hold = theDateOfGame;
+                        index = i;
+                        const datePlaying = document.createElement("span");
+                        datePlaying.setAttribute("class", "bg-black padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13");
+                        datePlaying.innerHTML = theDateOfGame;
+                        row3El.childNodes[1].append(datePlaying);
+                        break;
+                    }
+                }  
+
+                getTeams(row3El, 3, hold, response);
+                
+                for(var i = index; i < response.data.events.length; i++){
+                    
+                        if(hold != response.data.events[i].date.substring(0,10)){
+                            var theDateOfGame = response.data.events[i].date.substring(0,10);
+                            index = i;
+                            hold = theDateOfGame;
+                            const datePlaying = document.createElement("span");
+                            datePlaying.setAttribute("class", "bg-black padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13");
+                            datePlaying.innerHTML = theDateOfGame;
+                            row4El.childNodes[1].append(datePlaying);
+                            break;
+                        }
+                }
+
+                getTeams(row4El, 15, hold, response);
+
+            });
+
+            function getTeams(row, child, hold, response){
+                for(var i = 0; i < response.data.events.length; i++){
+                    if(hold == response.data.events[i].date.substring(0,10)){
+                        var teamNames = response.data.events[i].shortName;
+                        const teamsPlaying = document.createElement("span");
+                        teamsPlaying.setAttribute("class", "bg-black padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13");
+                        teamsPlaying.innerHTML = teamNames;
+                        row.childNodes[child].append(teamsPlaying);
+                    }
+                }
+            }
+    }
+
+    getGames(weeksPlayed[0].start,weeksPlayed[0].end)
+}
 initPage();
-
+initCalendar();
 
 
   // This is for the current date and time
